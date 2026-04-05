@@ -188,10 +188,8 @@ long findPos(FILE *f, char *name) {
 	while(1) {
 		pos = ftell(f);
 
-		if (fread(&pet_temp, sizeof(Pet), 1, f) != 1) break;
-		
-		if (strcmp(pet_temp.name, name) == 0)
-			return pos;
+		if (fread(&pet_temp, sizeof(Pet), 1, f) != 1) break;		
+		if (strcmp(pet_temp.name, name) == 0) return pos;
 	}
 
 	return -1L;
@@ -318,8 +316,7 @@ void playWPet() {
 	if (pet.fun == 100 || pet.energy < 10 || pet.food < 10) {
 		printf(YELLOW "\n%s can't play right now (^._.^)\n" RESET, pet.name);
 
-		if (pet.fun == 100)
-			printf("\nTry doing something else.\n");
+		if (pet.fun == 100) printf("\nTry doing something else.\n");
 			
 		if (pet.fun != 100)
 			printf("\nTip: %s can't play when hungry or tired.\n", pet.name);
@@ -422,9 +419,7 @@ int RUN(char key, int selected) {
 		key = getchar();
 		menu_size = 2;
 
-		if (key == '\033')
-			BROWSE(&selected, &menu_size);
-
+		if (key == '\033') BROWSE(&selected, &menu_size);
 		else if (key == ENTER) {
 			switch(selected) {
 				case 0:
@@ -450,9 +445,7 @@ int RUN(char key, int selected) {
 		key = getchar();
 		menu_size = 5;
 
-		if (key == '\033')
-			BROWSE(&selected, &menu_size);
-
+		if (key == '\033') BROWSE(&selected, &menu_size);
 		else if (key == ENTER) {
 			switch(selected) {
 				case 0: feedPet();    break;
