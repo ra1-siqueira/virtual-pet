@@ -126,35 +126,23 @@ void show_menuPET(int selected) {
 
 	printf(YELLOW " ____________________________________________________\n\n" RESET);
 
-	if (selected == 0)
-		printf(YELLOW "^.^ FEED" RESET "\n");
-	else
-		printf("    feed\n");
+	if (selected == 0) printf(YELLOW "^.^ FEED" RESET "\n");
+	else printf("    feed\n");
 
-	if (selected == 1)
-		printf(YELLOW "^.^ PLAY" RESET "\n");
-	else
-		printf("    play\n");
+	if (selected == 1) printf(YELLOW "^.^ PLAY" RESET "\n");
+	else printf("    play\n");
 
-	if (selected == 2)
-		printf(YELLOW "^.^ SLEEP" RESET "\n");
-	else
-		printf("    sleep\n");
+	if (selected == 2) printf(YELLOW "^.^ SLEEP" RESET "\n");
+	else printf("    sleep\n");
 
-	if (selected == 3)
-		printf(YELLOW "^.^ POTIONS" RESET "\n");
-	else
-		printf("    potions\n");
+	if (selected == 3) printf(YELLOW "^.^ POTIONS" RESET "\n");
+	else printf("    potions\n");
 
-	if (selected == 4)
-		printf(YELLOW "^.^ RESTART" RESET "\n");
-	else
-		printf("    restart\n");
+	if (selected == 4) printf(YELLOW "^.^ RESTART" RESET "\n");
+	else printf("    restart\n");
 
-	if (selected == 5)
-		printf(YELLOW "^.^ EXIT" RESET "\n");
-	else
-		printf("    exit\n");
+	if (selected == 5) printf(YELLOW "^.^ EXIT" RESET "\n");
+	else printf("    exit\n");
 
 	printf("\n                                  You have: " YELLOW "%d coins\n" RESET, coins);
 	printf("(You get +10 coins every time you complete an action)\n");
